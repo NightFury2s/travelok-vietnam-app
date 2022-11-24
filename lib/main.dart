@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'TraveloK Vietnam App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        platform: TargetPlatform.iOS
       ),
+      debugShowCheckedModeBanner: false,
       home: const SplashHome(title: 'TraveloK Vietnam'),
     );
   }
