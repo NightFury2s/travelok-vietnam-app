@@ -19,12 +19,12 @@ class LoginPage extends StatelessWidget {
               margin: EdgeInsets.only(top: 150),
               child: Column(
                 children: [
-                  Text(
+                  const Text(
                     'Đăng nhập ngay',
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                   ),
                   const SizedBox(height: 10),
-                  Text(
+                  const Text(
                     'Vui lòng đăng nhập để sử dụng ứng dụng',
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
                   ),
@@ -38,14 +38,14 @@ class LoginPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[200],
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                             offset: Offset(0, 10),
                             blurRadius: 50,
                             color: Color(0xffEEEEEE)),
                       ],
                     ),
-                    child: TextField(
+                    child: const TextField(
                       cursorColor: Color(0xffF5591F),
                       decoration: InputDecoration(
                         hintText: "example@gmail.com",
@@ -64,14 +64,14 @@ class LoginPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       color: Colors.grey[200],
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                             offset: Offset(0, 10),
                             blurRadius: 50,
                             color: Color(0xffEEEEEE)),
                       ],
                     ),
-                    child: TextField(
+                    child: const TextField(
                       cursorColor: Color(0xffF5591F),
                       decoration: InputDecoration(
                         hintText: "Mật khẩu",
@@ -100,7 +100,10 @@ class LoginPage extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       // Write Click Listener Code Here.
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()));
                     },
                     child: Container(
                       alignment: Alignment.center,
@@ -110,14 +113,14 @@ class LoginPage extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: xBackgroundColor,
                         borderRadius: BorderRadius.circular(10),
-                        boxShadow: [
+                        boxShadow: const [
                           BoxShadow(
                               offset: Offset(0, 10),
                               blurRadius: 50,
                               color: Color(0xffEEEEEE)),
                         ],
                       ),
-                      child: Text(
+                      child: const Text(
                         "Đăng nhập",
                         style: TextStyle(color: Colors.white),
                       ),
@@ -154,7 +157,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 20,bottom: 40),
+                    margin: EdgeInsets.only(top: 20, bottom: 40),
                     child: Text(
                       "Hoặc đăng nhập",
                       style: TextStyle(color: xGrayXColor),
@@ -178,7 +181,7 @@ class LoginPage extends StatelessWidget {
                       width: 40,
                       height: 40,
                       margin: EdgeInsets.only(left: 5, right: 5),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: NetworkImage(
@@ -196,7 +199,7 @@ class LoginPage extends StatelessWidget {
                       width: 40,
                       height: 40,
                       margin: EdgeInsets.only(left: 5, right: 5),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: NetworkImage(
@@ -214,7 +217,7 @@ class LoginPage extends StatelessWidget {
                       width: 40,
                       height: 40,
                       margin: EdgeInsets.only(left: 5, right: 5),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
                             image: NetworkImage(
