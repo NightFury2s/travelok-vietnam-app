@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../constants.dart';
-import 'componets/NavbarBottom.dart';
+import 'package:travelok_vietnam_app/constants.dart';
+import 'components/NavbarBottom.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Container(
         child: ListView(
-          physics: ClampingScrollPhysics(),
+          physics: const ClampingScrollPhysics(),
           children: <Widget>[
             // TOP BAR
             Padding(
@@ -35,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                         Container(
                           width: 35,
                           height: 35,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               color: Colors.white, shape: BoxShape.circle),
                         ),
                         SizedBox(width: 5),
@@ -73,7 +72,7 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     "Explore the",
                     style: TextStyle(fontSize: 35, fontWeight: FontWeight.w300),
                   ),
@@ -105,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    child: Text(
+                    child: const Text(
                       'Best Destination',
                       style: TextStyle(
                         fontSize: 20,
@@ -117,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       print('Dòng 60');
                     },
-                    child: Text(
+                    child: const Text(
                       'View all',
                       style: TextStyle(color: Color(0xFF42A5F5)),
                     ),
@@ -150,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                             height: 330,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                   image: NetworkImage(
                                     'https://images.unsplash.com/photo-1578059457703-850565b053f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGFydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
                                   ),
@@ -167,10 +166,10 @@ class _HomePageState extends State<HomePage> {
                                     },
                                     child: Container(
                                       padding: EdgeInsets.all(8),
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Colors.black26,
                                           shape: BoxShape.circle),
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.bookmark_border,
                                         color: Colors.white,
                                       ),
@@ -195,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                                           fontSize: 17, color: xTitleTextColor),
                                     ),
                                     Row(
-                                      children: [
+                                      children: const [
                                         Icon(
                                           Icons.star,
                                           color: Colors.amber,
@@ -219,7 +218,7 @@ class _HomePageState extends State<HomePage> {
                                           color: Colors.grey[400],
                                           size: 22,
                                         ),
-                                        SizedBox(width: 2),
+                                        const SizedBox(width: 2),
                                         Text(
                                           "Đà Nẵng City",
                                           style: TextStyle(
@@ -233,7 +232,7 @@ class _HomePageState extends State<HomePage> {
                                         Container(
                                           width: 22,
                                           height: 22,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                               color: Colors.black54,
                                               shape: BoxShape.circle),
                                         ),
@@ -251,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            NavbarBottom()
+            const NavbarBottom()
           ],
         ),
       ),
