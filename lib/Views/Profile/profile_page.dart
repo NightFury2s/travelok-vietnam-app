@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelok_vietnam_app/Views/Home/HomePage.dart';
-import 'card_features.dart';
+import 'components/card_features.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -64,7 +64,7 @@ class Profile extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     const Text(
-                      "Ngọc Mạnh",
+                      "Demo",
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.black,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travelok_vietnam_app/Views/Home/components/TravelCard.dart';
 import 'package:travelok_vietnam_app/Views/Profile/profile_page.dart';
 import 'package:travelok_vietnam_app/constants.dart';
+import '../Welcome/Welcome.dart';
 import 'components/NavbarBottom.dart';
 
 class HomePage extends StatefulWidget {
@@ -123,9 +124,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      print('Dòng 60');
-                    },
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Welcome())),
                     child: const Text(
                       'View all',
                       style: TextStyle(color: Color(0xFF42A5F5)),
