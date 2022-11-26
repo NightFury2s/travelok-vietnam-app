@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travelok_vietnam_app/Views/Auth/Login/LoginPage.dart';
-import '../../constants.dart';
+import 'package:travelok_vietnam_app/Views/Onboard/OnboardPage.dart';
 
 class SplashHome extends StatefulWidget {
   const SplashHome({Key? key, required this.title}) : super(key: key);
@@ -14,7 +13,7 @@ class SplashHome extends StatefulWidget {
 class _SplashHomeState extends State<SplashHome> {
   @override
   void initState() {
-    var splashHome = const Duration(seconds: 4);
+    var splashHome = const Duration(seconds: 3);
     // delayed 3 seconds to next page
     Future.delayed(splashHome, () {
       // to next page and close this page
@@ -22,10 +21,10 @@ class _SplashHomeState extends State<SplashHome> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return const LoginPage();
+            return const OnboardPage();
           },
         ),
-            (route) => false,
+        (route) => false,
       );
     });
     // TODO: implement initState
@@ -39,18 +38,21 @@ class _SplashHomeState extends State<SplashHome> {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: xBackgroundColor,
               gradient: LinearGradient(
-                  colors: [(new Color(0xFF42A5F5)), (new Color(0xFF7E57C2))],
+                  colors: [(new Color(0xFF42A5F5)), (new Color(0xFF448AFF))],
                   begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter
-              ),
+                  end: Alignment.bottomCenter),
             ),
           ),
-          Center(
-            child: Container(
-              child: Text("TraveloK Vietnam", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white,),),
-            ),
+          const Center(
+            child: Text(
+                "TraveloK Vietnam",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
           ),
         ],
       ),
