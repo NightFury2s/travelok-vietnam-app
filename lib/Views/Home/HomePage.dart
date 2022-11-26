@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelok_vietnam_app/Views/Home/components/TravelCard.dart';
+import 'package:travelok_vietnam_app/Views/Profile/profile_page.dart';
 import 'package:travelok_vietnam_app/constants.dart';
 import 'components/NavbarBottom.dart';
 
@@ -39,17 +40,25 @@ class _HomePageState extends State<HomePage> {
                               color: Colors.white, shape: BoxShape.circle),
                         ),
                         SizedBox(width: 5),
-                        Text(
-                          'Thai Ninh',
-                          style: TextStyle(fontSize: 15, color: xGrayXColor),
-                        )
+                        GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Profile())),
+                          child: Text(
+                            'Thai Ninh',
+                            style: TextStyle(fontSize: 15, color: xGrayXColor),
+                          ),
+                        ),
+                        // Text(
+                        //   'Thai Ninh',
+                        //   style: TextStyle(fontSize: 15, color: xGrayXColor),
+                        // )
                       ],
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {
-                      print('THông báo');
-                    },
+                    onTap: () {},
                     child: Container(
                       padding: EdgeInsets.all(10),
                       decoration: BoxDecoration(
