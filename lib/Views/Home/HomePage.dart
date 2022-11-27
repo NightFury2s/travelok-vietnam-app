@@ -124,10 +124,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Welcome())),
+                    onTap: () {},
                     child: const Text(
                       'View all',
                       style: TextStyle(color: Color(0xFF42A5F5)),

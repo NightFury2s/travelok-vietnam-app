@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travelok_vietnam_app/Views/Auth/Login/LoginPage.dart';
+import 'package:travelok_vietnam_app/Views/Welcome/Welcome.dart';
 import '../../constants.dart';
 
 class SplashHome extends StatefulWidget {
@@ -22,10 +23,10 @@ class _SplashHomeState extends State<SplashHome> {
         context,
         MaterialPageRoute(
           builder: (context) {
-            return const LoginPage();
+            return const Welcome();
           },
         ),
-            (route) => false,
+        (route) => false,
       );
     });
     // TODO: implement initState
@@ -43,13 +44,19 @@ class _SplashHomeState extends State<SplashHome> {
               gradient: LinearGradient(
                   colors: [(new Color(0xFF42A5F5)), (new Color(0xFF7E57C2))],
                   begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter
-              ),
+                  end: Alignment.bottomCenter),
             ),
           ),
           Center(
             child: Container(
-              child: Text("TraveloK Vietnam", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white,),),
+              child: Text(
+                "TraveloK Vietnam",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
         ],
